@@ -37,7 +37,7 @@ python3 eval_openai.py --d {id}
 ```
 Then, to evaluate the attack success rate using the classifier of HarmBench, run:
 ```
-bash eval_harmbench.py
+bash eval_harmbench.sh
 ```
 The results will be saved in ```results/trans_harmbench_llama3.1-8b_eval_gpt-4o-mini_eval.json```
 
