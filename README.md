@@ -31,13 +31,14 @@ id   status        description
 0    in_progress   results/trans_harmbench_llama3.1-8b_eval_gpt-4o-mini.jsonl
 ...  ...           ...
 ```
-The "id" is used for identifying different submissions. Once the status turns to "completed", download the result file by running:
+The "id" is used for identifying different submissions. Once the status turns to "completed", download the output file by running:
 ```
 python3 eval_openai.py --d {id}
 ```
+The output file will be saved as ```results/trans_harmbench_llama3.1-8b_eval_gpt-4o-mini_output.jsonl```.
 Then, to evaluate the attack success rate using the classifier of HarmBench, run:
 ```
-bash eval_harmbench.sh
+bash eval_harmbench.sh results/trans_harmbench_llama3.1-8b_eval_gpt-4o-mini_output.jsonl
 ```
 The results will be saved in ```results/trans_harmbench_llama3.1-8b_eval_gpt-4o-mini_eval.json```
 
