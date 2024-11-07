@@ -29,7 +29,7 @@ def main(args, model, data_pairs, suffix):
     save_dict = {"suffix": suffix}
 
     for i in range(len(data_pairs)):
-        goal, rephrased_prompts, target = data_pairs[i]
+        goal, _, target = data_pairs[i]
         
         #####################
         # rephrase
